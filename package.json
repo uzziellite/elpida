@@ -1,0 +1,17 @@
+{
+  "name": "elpida",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/svelte": "^4.0.3",
+    "@astrojs/vercel": "^5.2.0",
+    "astro": "^3.5.3"
+  }
+}

@@ -1,0 +1,37 @@
+---
+import Layout from "@layouts/layout.astro";
+
+export const prerender = true;
+---
+
+<Layout title="Error 404 - Elpida Africa">
+  <!-- error-area-start -->
+  <div class="tp-error__area pt-120 pb-120">
+      <div class="container">
+          <div class="row">
+              <div class="col-xl-12">
+                  <div class="tp-error__box text-center">
+                      <div class="tp-error__thumb">
+                          <img src="/assets/img/error/error.png" alt="Page not found">
+                      </div>
+                      <div class="tp-error__text">
+                          <h4 class="tp-error__title">Sorry We Can't Find That Page! </h4>
+                      </div>
+                      <div class="tp-error__form-box">
+                          <form action="/blog/search">
+                              <input type="text" placeholder="Search here" name="s">
+                              <button class="tp-error__search-box"><i class="flaticon-loupe"></i></button>
+                          </form>
+                      </div>
+                      <div class="tp-error__btn">                                
+                          <a class="tp-btn" href="/">Back Home</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- error-area-end -->
+	
+
+</Layout>

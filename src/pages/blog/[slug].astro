@@ -1,0 +1,169 @@
+---
+import Layout from "@layouts/layout.astro";
+import CommentViews from "@components/CommentViews.svelte";
+import Search from "@components/Search.svelte";
+import PostComment from "@components/PostComment.svelte";
+
+const { slug } = Astro.params;
+
+/**
+ * Load post content
+ */
+let res = await fetch(`${import.meta.env.PUBLIC_CMS}wp-json/wp/v2/posts?slug=${slug}&_embed`)
+let post = await res.json()
+
+/**
+ * Load latest posts
+ */
+const latest = await fetch(`${import.meta.env.PUBLIC_CMS}wp-json/wp/v2/posts?categories=2&_embed&per_page=3&sort=desc`)
+const latest_data = await latest.json()
+
+if (!post[0])
+  return Astro.redirect('/404')
+
+const formatDate = (timestamp) => {
+  
+  const date = new Date(timestamp);
+
+  const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+  
+  const formattedDate = new Intl.DateTimeFormat('en-US', options).format(date);
+
+  return formattedDate;
+}
+---
+
+<Layout
+	title={`${post[0].title.rendered} - Elpida Africa`}
+  description={post[0].yoast_head_json.description}
+  type={post[0].yoast_head_json.og_type}
+  author={post[0].yoast_head_json.author}
+  og_width={post[0].yoast_head_json.og_image[0].width}
+  og_url={Astro.request.url}
+  og_height={post[0].yoast_head_json.og_image[0].height}
+  og_image={post[0].yoast_head_json.og_image[0].url}
+  canonical={Astro.request.url}
+  publish_time={post[0].yoast_head_json.article_published_time}
+  modified_time={post[0].yoast_head_json.article_modified_time}
+  og_image_type={post[0].yoast_head_json.og_image[0].type}
+  estimate_read_time={post[0].yoast_head_json.twitter_misc["Est. reading time"]}>
+    
+
+        <!-- breadcrumb-area-start -->
+        <div class="tp-breadcrumb__area p-relative fix tp-breadcrumb-height" data-background="/assets/img/breadcrumb/breadcrumb-bg.png">
+            <div class="tp-breadcrumb__shape-1 z-index-5">
+                <img src="/assets/img/breadcrumb/breadcrumb-shape-1.png" alt="">
+            </div>
+            <div class="tp-breadcrumb__shape-2 z-index-5">
+                <img src="/assets/img/breadcrumb/breadcrumb-shape-2.png" alt="">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="tp-breadcrumb__content z-index-5">
+                            <div class="tp-breadcrumb__list">
+                               <span><a href="/">home</a></span> 
+                               <span class="dvdr"><i class="fa-sharp fa-solid fa-slash-forward"></i></span>
+                               <span>blog</span>
+                            </div>
+                            <h3 class="tp-breadcrumb__title">
+                              {post[0].title.rendered}
+                            </h3>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb-area-end -->
+
+
+      <!-- postbox area start -->
+      <section class="postbox__area pt-120 pb-80">
+        <div class="container">
+           <div class="row">
+              <div class="col-xxl-8 col-xl-8 col-lg-8">
+                 <div class="postbox__wrapper">
+                    <article class="postbox__item format-image mb-50 transition-3">
+                       <div class="postbox__thumb p-relative m-img">
+                           <div class="postbox__thumb-text d-none d-md-block">
+                              <span>
+                                {formatDate(post[0].yoast_head_json.article_published_time)}
+                              </span>
+                           </div>
+                          <img src={post[0]._embedded["wp:featuredmedia"] ? post[0]._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url : ''} alt={post[0].title.rendered}>
+                       </div>
+                       <div class="postbox__content">
+                          <div class="postbox__meta">
+                             <span><i class="flaticon-user"></i>By {post[0].yoast_head_json.author}</span>
+                          </div>
+                          <h3 class="postbox__title">
+                            {post[0].title.rendered}
+                          </h3>
+                          <div class="postbox__text">
+                             <div set:html={post[0].content.rendered}></div>
+                             <div class="postbox__thumb m-img p-relative">
+                             
+                             <div class="postbox__details-share-wrapper">
+                                <div class="row">
+                                   <div class="col-xl-7 col-lg-6 col-md-6">
+                                      <div class="postbox__details-share text-lg-start">
+                                         <span>Share:</span>
+                                         <a href={`https://facebook.com/sharer/sharer.php?u=${Astro.request.url}`} target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                         <a href={`https://x.com/share?url=${Astro.request.url}`} target="_blank"><i class="fab fa-twitter"></i></a>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                          </div>
+                          </div>
+                        </div>
+                    </article>
+                    <CommentViews client:load data={post[0]} />
+                    <PostComment client:load id={post[0]["id"]} />
+                 </div>
+              </div>
+              <div class="col-xxl-4 col-xl-4 col-lg-4">
+                 <div class="sidebar__wrapper">
+                    <Search client:load />
+                    <div class="sidebar__widget mb-30">
+                       <h3 class="sidebar__widget-title">Latest Posts</h3>
+                       <div class="sidebar__widget-content">
+                          <div class="sidebar__post">
+                            {
+                              latest_data.map((item) => (
+                                   <div class="rc__post mb-10 d-flex align-items-center">
+                                      <div class="rc__post-content">
+                                         <h3 class="rc__post-title">
+                                            <a href={`/blog/${item.slug}`}>
+                                              {item.title.rendered}
+                                            </a>
+                                         </h3>
+                                      </div>
+                                   </div>
+
+                                ))
+                            }
+                          </div>
+                       </div>
+                    </div>
+                    <!--<div class="sidebar__widget mb-30">
+                       <h3 class="sidebar__widget-title">Tags</h3>
+                       <div class="sidebar__widget-content">
+                          <div class="tagcloud">
+                             <a href="#">Fundraising</a>
+                             <a href="#">Charity</a>
+                             <a href="#">kids Education</a>
+                             <a href="#">Food</a>
+                             <a href="#">Water</a>
+                             <a href="#">Health</a>
+                             <a href="#">kids</a>
+                          </div>
+                       </div>
+                    </div>-->
+                 </div>
+              </div>
+           </div>
+        </div>
+     </section>
+     <!-- postbox area end -->
+  </Layout>
