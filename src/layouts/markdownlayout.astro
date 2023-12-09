@@ -1,0 +1,55 @@
+---
+import Header from "@components/header.astro"
+import Footer from "@components/footer.astro"
+
+const { frontmatter } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <title>{frontmatter.title} - Elpida Africa</title>
+	    <meta name="description" content={frontmatter.description}>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo/favicon.ico">
+	    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="/assets/css/animate.css">
+	    <link rel="stylesheet" href="/assets/css/custom-animation.css">
+	    <link rel="stylesheet" href="/assets/css/slick.css">
+	    <link rel="stylesheet" href="/assets/css/flaticon.css">
+	    <link rel="stylesheet" href="/assets/css/nice-select.css">
+	    <link rel="stylesheet" href="/assets/css/flaticon.css">
+	    <link rel="stylesheet" href="/assets/css/swiper-bundle.css">
+	    <link rel="stylesheet" href="/assets/css/meanmenu.css">
+	    <link rel="stylesheet" href="/assets/css/font-awesome-pro.css">
+	    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	    <link rel="stylesheet" href="/assets/css/spacing.css">
+	    <link rel="stylesheet" href="/assets/css/style.css">
+	</head>
+
+	<body>
+		<Header />
+
+		<main class="container">
+			<slot />
+		</main>
+
+		<Footer />
+		
+		<script src="/assets/js/jquery.js" is:inline></script>
+	  <script src="/assets/js/waypoints.js" is:inline></script>
+	  <script src="/assets/js/bootstrap.bundle.min.js" is:inline></script>
+	  <script src="/assets/js/slick.js" is:inline></script>
+	  <script src="/assets/js/magnific-popup.js" is:inline></script>
+	  <script src="/assets/js/purecounter.js" is:inline></script>
+	  <script src="/assets/js/wow.js" is:inline></script>
+	  <script src="/assets/js/nice-select.js" is:inline></script>
+	  <script src="/assets/js/swiper-bundle.js" is:inline></script>
+	  <script src="/assets/js/isotope-pkgd.js" is:inline></script>
+	  <script src="/assets/js/imagesloaded-pkgd.js" is:inline></script>
+	  <script src="/assets/js/ajax-form.js" is:inline></script>
+	  <script src="/assets/js/main.js" is:inline></script>
+	</body>
+</html>

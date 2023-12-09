@@ -2,6 +2,7 @@
 import Layout from "@layouts/layout.astro"
 
 //Load blogs
+
 const blog = await fetch(`${import.meta.env.PUBLIC_CMS}wp-json/wp/v2/posts?categories=2&_embed&per_page=3&sort=desc`)
 const blog_data = await blog.json()
 
@@ -128,7 +129,7 @@ const formatDate = (timestamp) => {
               <div class="col-xl-12">
                   <div class="tp-service-3__section-title text-center pb-40">
                       <span class="tp-section-subtitle-3">What we do</span>
-                      <h4 class="tp-section-title">We offer the poor an opportunity to study</h4>
+                      <h4 class="tp-section-title">We offer an opportunity to study for those who can't afford.</h4>
                   </div>
               </div>
           </div>
@@ -138,10 +139,7 @@ const formatDate = (timestamp) => {
                   <div class="tp-service-3__item p-relative">
                       <div class="tp-service-3__thumb-box p-relative">
                           <div class="tp-service-3__thumb">
-                              <img src="assets/img/service/service-3-1.jpg" alt="">
-                          </div>
-                          <div class="tp-service-3__icon">
-                              <span><i class="flaticon-healthy-food"></i></span>
+                              <img src="/images/education.jpg" alt="">
                           </div>
                       </div>
                       <div class="tp-service-3__content">
@@ -163,10 +161,7 @@ const formatDate = (timestamp) => {
                   <div class="tp-service-3__item p-relative">
                       <div class="tp-service-3__thumb-box p-relative">
                           <div class="tp-service-3__thumb">
-                              <img src="assets/img/service/service-3-2.jpg" alt="">
-                          </div>
-                          <div class="tp-service-3__icon">
-                              <span><i class="flaticon-open-book"></i></span>
+                              <img src="/images/comprehensive.jpg" alt="">
                           </div>
                       </div>
                       <div class="tp-service-3__content">
@@ -188,10 +183,7 @@ const formatDate = (timestamp) => {
                   <div class="tp-service-3__item p-relative">
                       <div class="tp-service-3__thumb-box p-relative">
                           <div class="tp-service-3__thumb">
-                              <img src="assets/img/service/service-3-3.jpg" alt="">
-                          </div>
-                          <div class="tp-service-3__icon">
-                              <span><i class="flaticon-drops"></i></span>
+                              <img src="/images/innovative.jpg" alt="">
                           </div>
                       </div>
                       <div class="tp-service-3__content">
@@ -213,10 +205,7 @@ const formatDate = (timestamp) => {
                   <div class="tp-service-3__item p-relative">
                       <div class="tp-service-3__thumb-box p-relative">
                           <div class="tp-service-3__thumb">
-                              <img src="assets/img/service/service-3-4.jpg" alt="">
-                          </div>
-                          <div class="tp-service-3__icon">
-                              <span><i class="flaticon-stethoscope"></i></span>
+                              <img src="/images/optimistic.jpg" alt="">
                           </div>
                       </div>
                       <div class="tp-service-3__content">
@@ -245,10 +234,10 @@ const formatDate = (timestamp) => {
               <div class="col-xl-5 col-lg-5 wow tpfadeLeft" data-wow-duration=".9s"
               data-wow-delay=".3s">
                   <div class="tp-about-3__main-thumb p-relative">
-                      <img src="assets/img/about/about-3-2.jpg" alt="">
-                      <div class="tp-about-3__thumb-sm">
+                      <img src="/images/kids-1.jpg" alt="">
+                      <!--<div class="tp-about-3__thumb-sm">
                           <img src="assets/img/about/about-3-3.jpg" alt="">
-                      </div>
+                      </div>-->
                       <!--<div class="tp-about-3__circle-box">
                           <img src="assets/img/about/about-3-2.png" alt="">
                           <div class="tp-about-3__circle-text">
@@ -333,7 +322,7 @@ const formatDate = (timestamp) => {
                   <div class="col-xl-8 col-lg-8 col-md-8">
                       <div class="tp-donate__section-title">
                           <span class="tp-section-subtitle-3">Help the people</span>
-                          <h4 class="tp-section-title">Our Cause</h4>
+                          <h4 class="tp-section-title">Objectives</h4>
                       </div>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4">
@@ -362,34 +351,13 @@ const formatDate = (timestamp) => {
                               </div>
                               <div class="tp-donate__content">
                                   <div class="tp-donate__text">
-                                      <a href="donation-details.html">
-                                          <h5 class="tp-donate__title">
-                                            Access to formal Education
-                                          </h5>
-                                      </a>
+                                      <h5 class="tp-donate__title">
+                                        Access to formal Education
+                                      </h5>
                                       <p>
-                                        All individuals, regardless of their socio-economic background, MUST have access to quality formal schooling.
+                                        To provide educational opportunity to needy students who cannot afford or have inadequate resources to join or continue their education;
                                       </p>
                                   </div>
-                                  <!--<div class="tp-donate-progress">
-                                      <div class="tp-donate-progress-item fix">
-                                          <span class="progress-count">42%</span>
-                                          <div class="progress">
-                                              <div class="progress-bar wow slideInLeft" data-wow-duration="1s"
-                                                  data-wow-delay=".3s" role="progressbar" data-width="42%"
-                                                  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
-                                                  style="width: 58%; visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: slideInLeft;">
-                                              </div>
-                                          </div>
-                                          <div class="progress-goals">
-                                              <span>Raised <b> $4,407</b></span>
-                                              <span>Goal <b> $10.000</b></span>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="tp-donate__button">
-                                      <a class="tp-grey-btn" href="donation-sidebar.html">Donate Now</a>
-                                  </div>-->
                               </div>
                           </div>
                       </div>
@@ -406,34 +374,13 @@ const formatDate = (timestamp) => {
                               </div>
                               <div class="tp-donate__content">
                                   <div class="tp-donate__text">
-                                      <a href="donation-details.html">
-                                          <h5 class="tp-donate__title">
-                                            Community Empowerment
-                                          </h5>
-                                      </a>
+                                      <h5 class="tp-donate__title">
+                                        Community Empowerment
+                                      </h5>
                                       <p>
-                                        We endeavor to engage and uplift communities through education thus creating a ripple effect that goes beyond individual impact.
+                                        To help students continue their studies and education by providing scholarship, educational material, enforcing the importance of education, creating a culture of education for better success in their education learning and educational institutions.
                                       </p>
                                   </div>
-                                  <!--<div class="tp-donate-progress">
-                                      <div class="tp-donate-progress-item fix">
-                                          <span class="progress-count">64%</span>
-                                          <div class="progress">
-                                              <div class="progress-bar wow slideInLeft" data-wow-duration="1s"
-                                                  data-wow-delay=".3s" role="progressbar" data-width="64%"
-                                                  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
-                                                  style="width: 58%; visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: slideInLeft;">
-                                              </div>
-                                          </div>
-                                          <div class="progress-goals">
-                                              <span>Raised <b> $6,790</b></span>
-                                              <span>Goal <b> $10.000</b></span>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="tp-donate__button">
-                                      <a class="tp-grey-btn" href="donation-sidebar.html">Donate Now</a>
-                                  </div>-->
                               </div>
                           </div>
                       </div>
@@ -444,40 +391,42 @@ const formatDate = (timestamp) => {
                                   <div class="tp-donate__thumb-shape">
                                       <img src="assets/img/donate/donate-shape-1.png" alt="">
                                       <div class="tp-donate__thumb-text">
-                                          <span>COLLABORATION</span>
+                                          <span>SUPPORT</span>
                                       </div>
                                   </div>
                               </div>
                               <div class="tp-donate__content">
                                   <div class="tp-donate__text">
-                                      <a href="donation-details.html">
-                                          <h5 class="tp-donate__title">
-                                            Global Collaboration
-                                          </h5>
-                                      </a>
+                                      <h5 class="tp-donate__title">
+                                        Aid Programs
+                                      </h5>
                                       <p>
-                                        Elpida Africa aims to partner with other organizations, communities, and individuals to create a network that amplifies the impact of educational initiatives.
+                                        To establish and manage aid programs to promote education to needy students.
                                       </p>
                                   </div>
-                                  <!--<div class="tp-donate-progress">
-                                      <div class="tp-donate-progress-item fix">
-                                          <span class="progress-count">82%</span>
-                                          <div class="progress">
-                                              <div class="progress-bar wow slideInLeft" data-wow-duration="1s"
-                                                  data-wow-delay=".3s" role="progressbar" data-width="82%"
-                                                  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
-                                                  style="width: 58%; visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: slideInLeft;">
-                                              </div>
-                                          </div>
-                                          <div class="progress-goals">
-                                              <span>Raised <b> $8,904</b></span>
-                                              <span>Goal <b> $10.000</b></span>
-                                          </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="tp-donate__item">
+                              <div class="tp-donate__thumb p-relative fix">
+                                  <img src="/images/sanitary.png" alt="">
+                                  <div class="tp-donate__thumb-shape">
+                                      <img src="assets/img/donate/donate-shape-1.png" alt="">
+                                      <div class="tp-donate__thumb-text">
+                                          <span>HYGIENE</span>
                                       </div>
                                   </div>
-                                  <div class="tp-donate__button">
-                                      <a class="tp-grey-btn" href="donation-sidebar.html">Donate Now</a>
-                                  </div>-->
+                              </div>
+                              <div class="tp-donate__content">
+                                  <div class="tp-donate__text">
+                                      <h5 class="tp-donate__title">
+                                        Hygiene Boost
+                                      </h5>
+                                      <p>
+                                        To advance any other objects of the community including providing sanitary towels to the girl child.
+                                      </p>
+                                  </div>
                               </div>
                           </div>
                       </div>
@@ -490,7 +439,7 @@ const formatDate = (timestamp) => {
 
   <!-- cta-area-start -->
   <div class="tp-cta-2__area pb-115">
-      <div class="tp-cta-2__bg p-relative fix" data-background="assets/img/cta/cta-bg-1.png">
+      <div class="tp-cta-2__bg p-relative fix">
           <div class="tp-cta-2__shape-3 d-none d-lg-block">
               <img src="assets/img/cta/cta-shape-3.png" alt="">
           </div>
@@ -506,7 +455,7 @@ const formatDate = (timestamp) => {
                           data-wow-delay=".5s">
                             Join us today on our mission <br> to make education available for those<br> who can't afford it.
                           </h4>
-                          <a href="/donation" class="tp-btn theme-2-bg wow tpfadeUp" data-wow-duration=".9s"
+                          <a href="/donations" class="tp-btn theme-2-bg wow tpfadeUp" data-wow-duration=".9s"
                           data-wow-delay=".7s">Donate Now</a>
                       </div>
                   </div>
@@ -515,88 +464,6 @@ const formatDate = (timestamp) => {
       </div>
   </div>
   <!-- cta-area-end -->
-
-  <!-- about-area-start -->
-  <!--<div class="tp-about-4__area tp-about-4__space p-relative fix grey-bg">
-      <div class="tp-about-4__bg" data-background="assets/img/about/about-3-4.jpg">
-          <div class="tp-about-4__bg-text d-none d-lg-block">
-              <span>Watch Our Videos</span>
-              <div class="tp-about-4__play-btn">
-                  <a class="popup-video" href="https://www.youtube.com/watch?v=PO_fBTkoznc"><i class="fa-sharp fa-solid fa-play"></i></a>
-              </div>
-          </div>
-      </div>
-      <div class="tp-about-4__shape d-none d-xxl-block">
-          <img src="assets/img/about/about-shape-4.png" alt="">               
-      </div>
-      <div class="container">
-          <div class="row">
-              <div class="offset-xl-6 offset-lg-6 col-xl-6 col-lg-6 wow tpfadeRight" data-wow-duration=".9s"
-              data-wow-delay=".5s">
-                  <div class="tp-about-4__left-side">
-                      <div class="tp-about-4__section-title">
-                          <span class="tp-section-subtitle-3">HELPING HANDS</span>
-                          <h4 class="tp-section-title">Raise Fund for Clean <br>& Healthy Food</h4>
-                      </div>
-                      <div class="tp-about-4__content">
-                          <div class="tp-about-4__text">
-                              <p>Supporting personal fundraisers can be a beautiful experience or a <br>horrifying one. Here is what you need to 
-                              </p>
-                          </div>                                
-                          <div class="tp-about-4__wraper pb-45 d-flex justify-content-between">
-                              <div class="tp-about-4__list-item d-flex align-items-start">
-                                  <div class="tp-about-4__list-icon">
-                                      <i class="flaticon-mission"></i>
-                                  </div>
-                                  <div class="tp-about-4__list-content">
-                                      <h4 class="tp-about-4__title-sm">Our Mission</h4>
-                                      <p>When we longer able to <br>change situation</p>
-                                  </div>
-                              </div>
-                              <div class="tp-about-4__list-item d-flex align-items-start">
-                                  <div class="tp-about-4__list-icon">
-                                      <i class="flaticon-vision"></i>
-                                  </div>
-                                  <div class="tp-about-4__list-content">
-                                      <h4 class="tp-about-4__title-sm">Our Vision</h4>
-                                      <p>When we longer able to <br>change situation</p>
-                                  </div>
-                              </div>
-                          </div>   
-                          <div class="tp-about-4__progress mb-40">
-                              <div class="tp-about-4__progress-item fix">
-                                  <h4>Charity</h4>
-                                  <span class="progress-count">78%</span>
-                                  <div class="progress">
-                                      <div class="progress-bar wow slideInLeft" data-wow-duration="1s"
-                                          data-wow-delay=".3s" role="progressbar" data-width="78%"
-                                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
-                                          style="width: 58%; visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: slideInLeft;">
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="tp-about-4__progress-item fix">
-                                  <h4>Donation</h4>
-                                  <span class="progress-count">92%</span>
-                                  <div class="progress">
-                                      <div class="progress-bar wow slideInLeft" data-wow-duration="1s"
-                                          data-wow-delay=".3s" role="progressbar" data-width="92%"
-                                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
-                                          style="width: 58%; visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: slideInLeft;">
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>                             
-                          <div class="tp-about-4__btn">
-                              <a class="tp-btn" href="/about">Discover More</a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>-->
-  <!-- about-area-end -->
 
   <!-- blog-area-start -->
   <div class="tp-blog-2__area tp-blog-2__space">
@@ -644,91 +511,6 @@ const formatDate = (timestamp) => {
       </div>
   </div>
   <!-- blog-area-end -->
-
-  <!-- gallery-area-start -->
-  <div class="tp-gallery-3__area tp-gallery-3__space">
-      <div class="container-fluid">
-          <div class="row">
-              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30 wow tpfadeLeft" data-wow-duration=".9s"
-              data-wow-delay=".3s">
-                  <div class="tp-gallery-3__item p-relative">
-                      <img src="assets/img/gallery/gal-3-1.jpg" alt="">
-                      <div class="tp-gallery-3__icon">
-                          <a class="popup-image" href="assets/img/gallery/gal-3-1.jpg">
-                              <svg id="body3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="51" viewBox="0 0 49 51">
-                                  <g id="gallery">
-                                    <g id="_02_hover" data-name="02 + hover">
-                                      <g id="go_icon" data-name="go icon">
-                                        <image id="right-arrow3" width="49" height="51" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAzCAYAAAA+VOAXAAAD3klEQVRogdWa24tWZRTGf/PNOH5MY2VREXagojOohNpEh8nEylDRP6XoRugiIagbb7LTRaRmmUVpSVSEFRFFanlAAqOLqCghFZrRrxlnHB9Z9Wx4+XJqZtqnb8EHL/ju7frxrPWuZ+/ZXZKoMLqALIEmMOpUZgHjSVq9wBj/3PdX9FRJANwGXAFcBXzv5G4FhoGfgeuAi4DvnGvs/wX4HbgZeKdqiEhoK3A9cMKJxXrCic4BrgSOAUPAjYb7AbgGuASYC7xcZTmtBXZ4LZdWFuMuKdrWaWTXzK9Sid3AdqAF/ArcBPQB37rErgV+An4EbnBfRKnd5esz6DVVQpwEHgOOApcBlwJH/G+3AMf9i7LqNuBbbfcINXoaFSSfxlGvjyUAeH3c6ziVbgfeBO4GfgMOJHvHq4aYSgwAG4B7fHq9DbwE/OFrR+sMEfPgYeApYJHLL3poE7Ar2ddVZ4hlwDNW4AzwIfACcNA9dLH3NasedpPFoJt+AXDKR/HzwCHvvzy9rm4QFwDLgfVx/vv4fRd4DtiX7Evzrl1P3AE8boBo4vcMcLhtX+qdVBcl+oGlwBNu4rAXO4EXgT3n2T+WrHvqAhHH6JNWIhL8yE38zST707wbdYAIBdYBC32M7rACYT/OTnJNX7IerxIivNAKKxAAI8D7wEYD/Ftk5dRVtRJLgEcTgFDgWT87/Fdk5k9V9cSFLqH1ngNRQjs9B/ZO8R6txKK3iOeJkn9LJe3R33Fa0nZJd0qaNY08mpJ2SXpa0tVlAvRKekjS55LOSDopaZOkgRneb162LgugIWmVpINWYNQKLMrj/mVBDEr61ACnJL0qabGk2Z0A0S9pbaJAlNCWvBQoCyIU+DIpodfdxLkoUDREn6SVkr6SNCFpSNIrBsj9/ysKYoWk/W3H6OKiFC/ipg8kTZwdo6FATydAxABakzRxS9JreTdx0RD3epBF/ClpqxVodgLEHCuQ9cCQS2hJ0cnnCbFc0r6kid8wQHcnQESSD0r6LPFChR2jRUB02wsdsgIjkraV0cR5QkQTf5J4oS15eqGiIbImPmCAYUmbixxkRUCkXuh04oV6OwGiaSvxhZt4OJnElSU/XYhHyvRCRUDcL2l3WxNP95m4Moi+SbxQbRSYCkTqhUbcxANleKE8IPo9yOK1ytnEC830rUQlEOGF9lqBseS9UGle6P9AxB/ml3kST7iJN1uBRl0BUogYVquTSTxiN1qJF5opxH3JI2WrzAeavCAGz+OFajGJp/pr+LuJhX7b/IH/wLG/wLfiuUc0c78/M4jPdj4Gvu4kgIjsU6F5/tKl8wI4B64Oiv+C2BAeAAAAAElFTkSuQmCC"/>
-                                      </g>
-                                    </g>
-                                  </g>
-                                </svg>
-                          </a>                        
-                      </div>
-                  </div>
-              </div>
-              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30 wow tpfadeLeft" data-wow-duration=".9s"
-              data-wow-delay=".5s">
-                  <div class="tp-gallery-3__item p-relative">
-                      <img src="assets/img/gallery/gal-3-2.jpg" alt="">
-                      <div class="tp-gallery-3__icon">
-                          <a class="popup-image" href="assets/img/gallery/gal-3-2.jpg">
-                              <svg id="body4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="51" viewBox="0 0 49 51">
-                                  <g id="gallery2">
-                                    <g id="_03_hover" data-name="02 + hover">
-                                      <g id="go_icon4" data-name="go icon">
-                                        <image id="right-arrow4" width="49" height="51" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAzCAYAAAA+VOAXAAAD3klEQVRogdWa24tWZRTGf/PNOH5MY2VREXagojOohNpEh8nEylDRP6XoRugiIagbb7LTRaRmmUVpSVSEFRFFanlAAqOLqCghFZrRrxlnHB9Z9Wx4+XJqZtqnb8EHL/ju7frxrPWuZ+/ZXZKoMLqALIEmMOpUZgHjSVq9wBj/3PdX9FRJANwGXAFcBXzv5G4FhoGfgeuAi4DvnGvs/wX4HbgZeKdqiEhoK3A9cMKJxXrCic4BrgSOAUPAjYb7AbgGuASYC7xcZTmtBXZ4LZdWFuMuKdrWaWTXzK9Sid3AdqAF/ArcBPQB37rErgV+An4EbnBfRKnd5esz6DVVQpwEHgOOApcBlwJH/G+3AMf9i7LqNuBbbfcINXoaFSSfxlGvjyUAeH3c6ziVbgfeBO4GfgMOJHvHq4aYSgwAG4B7fHq9DbwE/OFrR+sMEfPgYeApYJHLL3poE7Ar2ddVZ4hlwDNW4AzwIfACcNA9dLH3NasedpPFoJt+AXDKR/HzwCHvvzy9rm4QFwDLgfVx/vv4fRd4DtiX7Evzrl1P3AE8boBo4vcMcLhtX+qdVBcl+oGlwBNu4rAXO4EXgT3n2T+WrHvqAhHH6JNWIhL8yE38zST707wbdYAIBdYBC32M7rACYT/OTnJNX7IerxIivNAKKxAAI8D7wEYD/Ftk5dRVtRJLgEcTgFDgWT87/Fdk5k9V9cSFLqH1ngNRQjs9B/ZO8R6txKK3iOeJkn9LJe3R33Fa0nZJd0qaNY08mpJ2SXpa0tVlAvRKekjS55LOSDopaZOkgRneb162LgugIWmVpINWYNQKLMrj/mVBDEr61ACnJL0qabGk2Z0A0S9pbaJAlNCWvBQoCyIU+DIpodfdxLkoUDREn6SVkr6SNCFpSNIrBsj9/ysKYoWk/W3H6OKiFC/ipg8kTZwdo6FATydAxABakzRxS9JreTdx0RD3epBF/ClpqxVodgLEHCuQ9cCQS2hJ0cnnCbFc0r6kid8wQHcnQESSD0r6LPFChR2jRUB02wsdsgIjkraV0cR5QkQTf5J4oS15eqGiIbImPmCAYUmbixxkRUCkXuh04oV6OwGiaSvxhZt4OJnElSU/XYhHyvRCRUDcL2l3WxNP95m4Moi+SbxQbRSYCkTqhUbcxANleKE8IPo9yOK1ytnEC830rUQlEOGF9lqBseS9UGle6P9AxB/ml3kST7iJN1uBRl0BUogYVquTSTxiN1qJF5opxH3JI2WrzAeavCAGz+OFajGJp/pr+LuJhX7b/IH/wLG/wLfiuUc0c78/M4jPdj4Gvu4kgIjsU6F5/tKl8wI4B64Oiv+C2BAeAAAAAElFTkSuQmCC"/>
-                                      </g>
-                                    </g>
-                                  </g>
-                                </svg>
-                          </a>                        
-                      </div>
-                  </div>
-              </div>
-              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30 wow tpfadeLeft" data-wow-duration=".9s"
-              data-wow-delay=".7s">
-                  <div class="tp-gallery-3__item p-relative">
-                      <img src="assets/img/gallery/gal-3-5.jpg" alt="">
-                      <div class="tp-gallery-3__icon">
-                          <a class="popup-image" href="assets/img/gallery/gal-3-5.jpg">
-                              <svg id="body5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="51" viewBox="0 0 49 51">
-                                  <g id="gallery9">
-                                    <g id="_09_hover" data-name="02 + hover">
-                                      <g id="go_icon9" data-name="go icon">
-                                        <image id="right-arrow9" width="49" height="51" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAzCAYAAAA+VOAXAAAD3klEQVRogdWa24tWZRTGf/PNOH5MY2VREXagojOohNpEh8nEylDRP6XoRugiIagbb7LTRaRmmUVpSVSEFRFFanlAAqOLqCghFZrRrxlnHB9Z9Wx4+XJqZtqnb8EHL/ju7frxrPWuZ+/ZXZKoMLqALIEmMOpUZgHjSVq9wBj/3PdX9FRJANwGXAFcBXzv5G4FhoGfgeuAi4DvnGvs/wX4HbgZeKdqiEhoK3A9cMKJxXrCic4BrgSOAUPAjYb7AbgGuASYC7xcZTmtBXZ4LZdWFuMuKdrWaWTXzK9Sid3AdqAF/ArcBPQB37rErgV+An4EbnBfRKnd5esz6DVVQpwEHgOOApcBlwJH/G+3AMf9i7LqNuBbbfcINXoaFSSfxlGvjyUAeH3c6ziVbgfeBO4GfgMOJHvHq4aYSgwAG4B7fHq9DbwE/OFrR+sMEfPgYeApYJHLL3poE7Ar2ddVZ4hlwDNW4AzwIfACcNA9dLH3NasedpPFoJt+AXDKR/HzwCHvvzy9rm4QFwDLgfVx/vv4fRd4DtiX7Evzrl1P3AE8boBo4vcMcLhtX+qdVBcl+oGlwBNu4rAXO4EXgT3n2T+WrHvqAhHH6JNWIhL8yE38zST707wbdYAIBdYBC32M7rACYT/OTnJNX7IerxIivNAKKxAAI8D7wEYD/Ftk5dRVtRJLgEcTgFDgWT87/Fdk5k9V9cSFLqH1ngNRQjs9B/ZO8R6txKK3iOeJkn9LJe3R33Fa0nZJd0qaNY08mpJ2SXpa0tVlAvRKekjS55LOSDopaZOkgRneb162LgugIWmVpINWYNQKLMrj/mVBDEr61ACnJL0qabGk2Z0A0S9pbaJAlNCWvBQoCyIU+DIpodfdxLkoUDREn6SVkr6SNCFpSNIrBsj9/ysKYoWk/W3H6OKiFC/ipg8kTZwdo6FATydAxABakzRxS9JreTdx0RD3epBF/ClpqxVodgLEHCuQ9cCQS2hJ0cnnCbFc0r6kid8wQHcnQESSD0r6LPFChR2jRUB02wsdsgIjkraV0cR5QkQTf5J4oS15eqGiIbImPmCAYUmbixxkRUCkXuh04oV6OwGiaSvxhZt4OJnElSU/XYhHyvRCRUDcL2l3WxNP95m4Moi+SbxQbRSYCkTqhUbcxANleKE8IPo9yOK1ytnEC830rUQlEOGF9lqBseS9UGle6P9AxB/ml3kST7iJN1uBRl0BUogYVquTSTxiN1qJF5opxH3JI2WrzAeavCAGz+OFajGJp/pr+LuJhX7b/IH/wLG/wLfiuUc0c78/M4jPdj4Gvu4kgIjsU6F5/tKl8wI4B64Oiv+C2BAeAAAAAElFTkSuQmCC"/>
-                                      </g>
-                                    </g>
-                                  </g>
-                                </svg>
-                          </a>                        
-                      </div>
-                  </div>
-              </div>
-              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30 wow tpfadeLeft" data-wow-duration=".9s"
-              data-wow-delay=".9s">
-                  <div class="tp-gallery-3__item p-relative">
-                      <img src="assets/img/gallery/gal-3-3.jpg" alt="">
-                      <div class="tp-gallery-3__icon">
-                          <a class="popup-image" href="assets/img/gallery/gal-3-3.jpg">
-                              <svg id="body99" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="51" viewBox="0 0 49 51">
-                                  <g id="gallery5">
-                                    <g id="_02_hover5" data-name="02 + hover">
-                                      <g id="go_icon5" data-name="go icon">
-                                        <image id="right-arrow5" width="49" height="51" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAzCAYAAAA+VOAXAAAD3klEQVRogdWa24tWZRTGf/PNOH5MY2VREXagojOohNpEh8nEylDRP6XoRugiIagbb7LTRaRmmUVpSVSEFRFFanlAAqOLqCghFZrRrxlnHB9Z9Wx4+XJqZtqnb8EHL/ju7frxrPWuZ+/ZXZKoMLqALIEmMOpUZgHjSVq9wBj/3PdX9FRJANwGXAFcBXzv5G4FhoGfgeuAi4DvnGvs/wX4HbgZeKdqiEhoK3A9cMKJxXrCic4BrgSOAUPAjYb7AbgGuASYC7xcZTmtBXZ4LZdWFuMuKdrWaWTXzK9Sid3AdqAF/ArcBPQB37rErgV+An4EbnBfRKnd5esz6DVVQpwEHgOOApcBlwJH/G+3AMf9i7LqNuBbbfcINXoaFSSfxlGvjyUAeH3c6ziVbgfeBO4GfgMOJHvHq4aYSgwAG4B7fHq9DbwE/OFrR+sMEfPgYeApYJHLL3poE7Ar2ddVZ4hlwDNW4AzwIfACcNA9dLH3NasedpPFoJt+AXDKR/HzwCHvvzy9rm4QFwDLgfVx/vv4fRd4DtiX7Evzrl1P3AE8boBo4vcMcLhtX+qdVBcl+oGlwBNu4rAXO4EXgT3n2T+WrHvqAhHH6JNWIhL8yE38zST707wbdYAIBdYBC32M7rACYT/OTnJNX7IerxIivNAKKxAAI8D7wEYD/Ftk5dRVtRJLgEcTgFDgWT87/Fdk5k9V9cSFLqH1ngNRQjs9B/ZO8R6txKK3iOeJkn9LJe3R33Fa0nZJd0qaNY08mpJ2SXpa0tVlAvRKekjS55LOSDopaZOkgRneb162LgugIWmVpINWYNQKLMrj/mVBDEr61ACnJL0qabGk2Z0A0S9pbaJAlNCWvBQoCyIU+DIpodfdxLkoUDREn6SVkr6SNCFpSNIrBsj9/ysKYoWk/W3H6OKiFC/ipg8kTZwdo6FATydAxABakzRxS9JreTdx0RD3epBF/ClpqxVodgLEHCuQ9cCQS2hJ0cnnCbFc0r6kid8wQHcnQESSD0r6LPFChR2jRUB02wsdsgIjkraV0cR5QkQTf5J4oS15eqGiIbImPmCAYUmbixxkRUCkXuh04oV6OwGiaSvxhZt4OJnElSU/XYhHyvRCRUDcL2l3WxNP95m4Moi+SbxQbRSYCkTqhUbcxANleKE8IPo9yOK1ytnEC830rUQlEOGF9lqBseS9UGle6P9AxB/ml3kST7iJN1uBRl0BUogYVquTSTxiN1qJF5opxH3JI2WrzAeavCAGz+OFajGJp/pr+LuJhX7b/IH/wLG/wLfiuUc0c78/M4jPdj4Gvu4kgIjsU6F5/tKl8wI4B64Oiv+C2BAeAAAAAElFTkSuQmCC"/>
-                                      </g>
-                                    </g>
-                                  </g>
-                                </svg>
-                          </a>                        
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- gallery-area-end -->
 
   <!-- cta-area-start -->
   <div class="tp-cta__area">
