@@ -6,7 +6,7 @@ description:	'Pascaline is a partner at Elpida Africa with a vision for educatio
 
 # Pascaline Sigoro
 
-## _Partner_
+## _Trustee_
 
 ![Pascaline Sigoro](/images/pascaline-1.png)
 

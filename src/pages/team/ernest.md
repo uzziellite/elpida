@@ -6,7 +6,7 @@ description:	'Ernest is one of the founders of Elpida Africa. He is passionate a
 
 # Ernest Ojiambo
 
-## _Founder_
+## _Trustee_
 
 ![Ernest Ojiambo](/images/ernest-1.png)
 

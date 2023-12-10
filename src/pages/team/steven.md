@@ -6,7 +6,7 @@ description:	'Stephen Juma is a partner at Elpida Africa NGO. He aims to provide
 
 # Stephen Juma Ojiambo
 
-## _Partner_
+## _Trustee_
 
 ![Stephen Juma](/images/steve-1.png)
 
