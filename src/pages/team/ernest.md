@@ -1,7 +1,7 @@
 ---
 layout:				'@layouts/markdownlayout.astro'
 title:				'Ernest Ojiambo'
-description:	'Ernest os one of the founders of Elpida Africa. He is passionate about empowering the less fortunate in marginalized communities'	
+description:	'Ernest is one of the founders of Elpida Africa. He is passionate about empowering the less fortunate in marginalized communities'	
 ---
 
 # Ernest Ojiambo

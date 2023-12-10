@@ -1,14 +1,14 @@
 ---
 layout:				'@layouts/markdownlayout.astro'
-title:				'Pauline Katumbi Mwanthi'
+title:				'Pauline Mwanthi'
 description:	'Pauline is one of the founders of the non profit for education; Elpida Africa. She strives to extend educational support to the less fortunate.'
 ---
 
-# Pauline Katumbi Mwanthi
+# Pauline Mwanthi
 
 ## _Founder_
 
-![Pauline Katumbi Mwanthi](/images/lynn-1.png)
+![Pauline Mwanthi](/images/lynn-1.png)
 
 ---
 

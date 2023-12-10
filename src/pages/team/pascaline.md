@@ -1,14 +1,14 @@
 ---
 layout:				'@layouts/markdownlayout.astro'
-title:				'Pascaline Kaveni Mwanthi'
+title:				'Pascaline Sigoro'
 description:	'Pascaline is a partner at Elpida Africa with a vision for education and prosperity for the less fortunate'
 ---
 
-# Pascaline Kaveni Mwanthi
+# Pascaline Sigoro
 
 ## _Partner_
 
-![Pascaline Kaveni Mwanthi](/images/pascaline-1.png)
+![Pascaline Sigoro](/images/pascaline-1.png)
 
 ---
 
