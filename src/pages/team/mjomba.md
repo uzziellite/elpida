@@ -8,7 +8,7 @@ description:	'Mjomba Mjomba is a passionate individual with a deep desire to the
 
 ## _Trustee_
 
-![Mjomba](https://fakeimg.pl/640x320)
+![Mjomba](/images/mjomba-1.png)
 
 ---
 
