@@ -6,7 +6,7 @@ description:	'Stacy Sang is a lawyer and a model who has a strong desire to empo
 
 # Stacy Sang
 
-## _Trustee_
+## _Good Will Ambassador_
 
 ![Stacy Sang](/images/stacy.png)
 
